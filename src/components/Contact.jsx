@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <section id="contact" style={sectionStyle}>
       <div className="container">
-        <motion.h2 
+        <motion.h2
           className="section-title"
           style={{ borderColor: 'black' }}
           initial={{ opacity: 0, x: -50 }}
@@ -53,7 +53,7 @@ const Contact = () => {
         >
           Contact
         </motion.h2>
-        <motion.p 
+        <motion.p
           style={subTitleStyle}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -63,37 +63,37 @@ const Contact = () => {
         </motion.p>
 
         <form style={formStyle} onSubmit={handleSubmit}>
-          <div style={inputGroupStyle}>
-            <input 
-              type="text" 
+          <div className="contact-inputs" style={inputGroupStyle}>
+            <input
+              type="text"
               name="name"
-              placeholder="VOTRE NOM" 
-              style={inputStyle} 
+              placeholder="VOTRE NOM"
+              style={inputStyle}
               value={formData.name}
               onChange={handleChange}
               required
             />
-            <input 
-              type="email" 
+            <input
+              type="email"
               name="email"
-              placeholder="VOTRE EMAIL" 
-              style={inputStyle} 
+              placeholder="bernardalade92@gmail.com"
+              style={inputStyle}
               value={formData.email}
               onChange={handleChange}
               required
             />
           </div>
-          <textarea 
+          <textarea
             name="message"
-            placeholder="VOTRE MESSAGE" 
+            placeholder="VOTRE MESSAGE"
             style={textareaStyle}
             value={formData.message}
             onChange={handleChange}
             required
           ></textarea>
-          
+
           {status && (
-            <p style={{ 
+            <p style={{
               color: status.includes('Erreur') || status.includes('Impossible') ? '#d9534f' : '#5cb85c',
               fontWeight: 'bold',
               marginTop: '10px'
@@ -102,9 +102,9 @@ const Contact = () => {
             </p>
           )}
 
-          <motion.button 
-            type="submit" 
-            className="btn-pill" 
+          <motion.button
+            type="submit"
+            className="btn-pill"
             style={buttonStyle}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

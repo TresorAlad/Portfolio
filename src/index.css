@@ -16,11 +16,17 @@
   box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--font-primary);
   background-color: var(--color-gray-bg);
   color: var(--color-black);
-  overflow-x: hidden;
 }
 
 
@@ -391,9 +397,14 @@ header:hover {
     display: none !important;
   }
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
+  .portfolio-grid,
+  .certs-grid {
+    grid-template-columns: 1fr !important;
     padding: 0 10px;
+  }
+
+  .contact-inputs {
+    flex-direction: column !important;
   }
 
   .social-icons {
