@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-bg: #D7D7D7;
+  --color-gray-box: #C4C4C4;
+  --color-text-gray: #919191;
+  --font-primary: 'Montserrat', sans-serif;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-gray-bg);
+  color: var(--color-black);
+  overflow-x: hidden;
+}
+
+
+/* Floating Black Glassmorphism Pill Header (Plus léger & transparent) */
+header {
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(0, 0, 0, 0.4);
+  /* Noir beaucoup plus léger */
+  backdrop-filter: blur(30px);
+  /* Flou plus intense pour l'effet Mist */
+  padding: 12px 30px;
+  border-radius: 100px;
+  z-index: 1000;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  /* Ombre plus douce */
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  /* Bordure ultra-discrète */
+}
+
+header:hover {
+  transform: translateX(-50%) translateY(-2px);
+  background: rgba(0, 0, 0, 0.5);
+  /* S'assombrit subtilement au survol */
+}
+
+/* Les styles scrollés ne sont plus nécessaires avec la capsule flottante */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  /* Toujours rond */
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.1);
+}
+
+.nav-links a {
+  color: #ddd;
+  /* White/Grayish links */
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 15px;
+  border-radius: 50px;
+  transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  /* Bulles blanches transparentes */
+  color: #fff;
+}
+
+/* Bouton Contact Adapté (Blanc à texte Noir) */
+.btn-header {
+  background: #fff;
+  color: #000;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+/* Bouton Premium Style (Black Pill / White Text) */
+.btn-premium {
+  background: black;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 100px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-premium:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-btn-wrapper {
+  margin-left: auto;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-black);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-gray-bg);
+  clip-path: polygon(0 0, 60% 0, 45% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content {
+  flex: 1.2;
+  padding: 0;
+  padding-left: 0;
+  text-align: left;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero-name {
+  font-size: 82px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -3px;
+  margin: 10px 0;
+  color: var(--color-black);
+}
+
+.hero-title {
+  color: #444;
+  /* Darker gray for better contrast on light gray bg */
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-box {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-gray-box);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--color-black);
+}
+
+.hero-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  /* Pousse l'image bien vers la zone noire à droite */
+  padding-top: 50px;
+}
+
+.hero-image-wrapper img {
+  max-width: 400px;
+  /* Réduit pour rentrer dans les 50% */
+  width: 100%;
+}
+
+/* Section Title global style */
+.section-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+  display: inline-block;
+  border-bottom: 4px solid var(--color-black);
+  padding-bottom: 10px;
+}
+
+/* Specific Portfolio Section (Black) */
+.portfolio-section {
+  background-color: var(--color-black);
+  color: white;
+  padding: 100px 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero::before {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 70%);
+  }
+
+  .hero-container {
+    flex-direction: column;
+    padding-top: 150px;
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 50px;
+  }
+}
+
+/* Section Dividers - Légers traits de séparation */
+#about,
+#portfolio,
+#certificates,
+#skills,
+#contact {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  /* Trait très discret */
+}
+
+/* Portfolio et Contact sur fond noir ont des séparateurs spécifiques */
+#portfolio,
+#contact {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
