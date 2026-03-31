@@ -5,7 +5,6 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'Email', icon: 'bx bx-envelope', url: 'mailto:bernardalade92@email.com' },
     { name: 'GitHub', icon: 'bx bxl-github', url: 'https://github.com/TresorAlad' },
     { name: 'LinkedIn', icon: 'bx bxl-linkedin', url: 'https://linkedin.com/in/tresor-alade/' },
   ];

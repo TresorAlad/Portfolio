@@ -31,7 +31,7 @@ const Hero = () => {
 
           <motion.div variants={itemVariants} className="social-icons" style={socialGroupStyle}>
             <motion.a
-              href="VOTRE_LIEN_GOOGLE_DRIVE"
+              href="https://drive.google.com/file/d/10Ay2UpVUx1d4OpIpeunhMYuZM_EYHgsA/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="cv-button"
