@@ -76,7 +76,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              placeholder="bernardalade92@gmail.com"
+              placeholder="VOTRE EMAIL"
               style={inputStyle}
               value={formData.email}
               onChange={handleChange}
