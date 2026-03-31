@@ -1,7 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('Envoi en cours...');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('Message envoyé avec succès !');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('Erreur : ' + data.message);
+      }
+    } catch (error) {
+      console.error('Erreur:', error);
+      setStatus("Impossible d'envoyer le message. Vérifiez que le serveur est démarré.");
+    }
+  };
+
   return (
     <section id="contact" style={sectionStyle}>
       <div className="container">
@@ -24,12 +62,46 @@ const Contact = () => {
           Travaillons ensemble ! Laissez-moi un message.
         </motion.p>
 
-        <form style={formStyle} onSubmit={(e) => e.preventDefault()}>
+        <form style={formStyle} onSubmit={handleSubmit}>
           <div style={inputGroupStyle}>
-            <input type="text" placeholder="VOTRE NOM" style={inputStyle} />
-            <input type="email" placeholder="VOTRE EMAIL" style={inputStyle} />
+            <input 
+              type="text" 
+              name="name"
+              placeholder="VOTRE NOM" 
+              style={inputStyle} 
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input 
+              type="email" 
+              name="email"
+              placeholder="VOTRE EMAIL" 
+              style={inputStyle} 
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </div>
-          <textarea placeholder="VOTRE MESSAGE" style={textareaStyle}></textarea>
+          <textarea 
+            name="message"
+            placeholder="VOTRE MESSAGE" 
+            style={textareaStyle}
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+          
+          {status && (
+            <p style={{ 
+              color: status.includes('Erreur') || status.includes('Impossible') ? '#d9534f' : '#5cb85c',
+              fontWeight: 'bold',
+              marginTop: '10px'
+            }}>
+              {status}
+            </p>
+          )}
+
           <motion.button 
             type="submit" 
             className="btn-pill" 

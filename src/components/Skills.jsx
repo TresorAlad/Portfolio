@@ -7,7 +7,6 @@ const Skills = () => {
     { name: 'GitHub', icon: 'devicon-github-original colored' },
     { name: 'GitLab', icon: 'devicon-gitlab-plain colored' },
     { name: 'UML / Modelio', icon: 'bx bx-shape-square', color: '#3A86FF' },
-    { name: 'React', icon: 'devicon-react-original colored' },
     { name: 'Supabase', icon: 'devicon-supabase-plain colored' },
     { name: 'Postman', icon: 'devicon-postman-plain colored' },
     { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' },
@@ -19,6 +18,8 @@ const Skills = () => {
     { name: 'Administration BDD', icon: 'bx bxs-server', color: '#FF9900' },
     { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
     { name: 'Azure SQL', icon: 'devicon-azure-plain colored' },
+    { name: 'React', icon: 'devicon-react-original colored' },
+    { name: 'Oracle', icon: 'devicon-oracle-plain colored' },
     { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
     { name: 'Golang', icon: 'devicon-go-original-wordmark colored' },
   ];
@@ -39,7 +40,7 @@ const Skills = () => {
   return (
     <section id="skills" style={sectionStyle}>
       <div className="container">
-        <motion.h2 
+        <motion.h2
           className="section-title"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -52,7 +53,7 @@ const Skills = () => {
           {/* Section: Actuellement */}
           <div style={skillsColumnStyle}>
             <h3 style={skillsTitleStyle}>J'UTILISE ACTUELLEMENT</h3>
-            <motion.div 
+            <motion.div
               style={gridStyle}
               variants={containerVariants}
               initial="hidden"
@@ -60,17 +61,17 @@ const Skills = () => {
               viewport={{ once: true }}
             >
               {currentSkills.map((skill, index) => (
-                <motion.div 
-                  key={index} 
-                  style={skillCardStyle} 
-                  variants={itemVariants} 
+                <motion.div
+                  key={index}
+                  style={skillCardStyle}
+                  variants={itemVariants}
                   whileHover={{ y: -8, backgroundColor: 'white', scale: 1.05 }}
                 >
-                  <i 
-                    className={skill.icon} 
-                    style={{ 
-                      fontSize: '52px', 
-                      color: skill.color ? skill.color : undefined 
+                  <i
+                    className={skill.icon}
+                    style={{
+                      fontSize: '52px',
+                      color: skill.color ? skill.color : undefined
                     }}
                   ></i>
                   <span style={skillNameStyle}>{skill.name}</span>
@@ -82,7 +83,7 @@ const Skills = () => {
           {/* Section: Apprentissage */}
           <div style={skillsColumnStyle}>
             <h3 style={skillsTitleStyle}>CE QUE J'APPRENDS</h3>
-            <motion.div 
+            <motion.div
               style={gridStyle}
               variants={containerVariants}
               initial="hidden"
@@ -90,17 +91,17 @@ const Skills = () => {
               viewport={{ once: true }}
             >
               {learningSkills.map((skill, index) => (
-                <motion.div 
-                  key={index} 
-                  style={skillCardStyle} 
-                  variants={itemVariants} 
+                <motion.div
+                  key={index}
+                  style={skillCardStyle}
+                  variants={itemVariants}
                   whileHover={{ y: -8, backgroundColor: 'white', scale: 1.05 }}
                 >
-                  <i 
-                    className={skill.icon} 
-                    style={{ 
-                      fontSize: '52px', 
-                      color: skill.color ? skill.color : undefined 
+                  <i
+                    className={skill.icon}
+                    style={{
+                      fontSize: '52px',
+                      color: skill.color ? skill.color : undefined
                     }}
                   ></i>
                   <span style={skillNameStyle}>{skill.name}</span>
