@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import profileImg from '../assets/profile.png';
 
@@ -48,8 +47,9 @@ const Hero = () => {
               className="social-box"
               style={socialLinkReset}
               whileHover={{ scale: 1.1, color: '#FFFFFF', backgroundColor: '#000000' }}
+              aria-label="GitHub de Trésor ALADE"
             >
-              <i className='bx bxl-github' ></i>
+              <i className='bx bxl-github' aria-hidden="true"></i>
             </motion.a>
 
             <motion.a
@@ -59,8 +59,9 @@ const Hero = () => {
               className="social-box"
               style={socialLinkReset}
               whileHover={{ scale: 1.1, color: '#FFFFFF', backgroundColor: '#000000' }}
+              aria-label="LinkedIn de Trésor ALADE"
             >
-              <i className='bx bxl-linkedin' ></i>
+              <i className='bx bxl-linkedin' aria-hidden="true"></i>
             </motion.a>
           </motion.div>
         </div>
@@ -137,7 +138,6 @@ const socialGroupStyle = {
 };
 
 const imageStyle = {
-  maxWidth: '550px',
   width: '100%',
   zIndex: 10,
   marginTop: '50px',

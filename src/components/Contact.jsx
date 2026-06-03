@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -20,12 +20,11 @@ const Contact = () => {
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
 
       if (data.success) {
@@ -45,7 +44,6 @@ const Contact = () => {
       <div className="container">
         <motion.h2
           className="section-title"
-          style={{ borderColor: 'black' }}
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -57,6 +55,7 @@ const Contact = () => {
           style={subTitleStyle}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
           Une opportunité, une collaboration ou juste envie d'échanger ? Laissez-moi un message.
@@ -64,7 +63,9 @@ const Contact = () => {
 
         <form style={formStyle} onSubmit={handleSubmit}>
           <div className="contact-inputs" style={inputGroupStyle}>
+            <label htmlFor="name" style={visuallyHiddenStyle}>Votre nom</label>
             <input
+              id="name"
               type="text"
               name="name"
               placeholder="VOTRE NOM"
@@ -73,7 +74,9 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
+            <label htmlFor="email" style={visuallyHiddenStyle}>Votre email</label>
             <input
+              id="email"
               type="email"
               name="email"
               placeholder="VOTRE EMAIL"
@@ -83,7 +86,9 @@ const Contact = () => {
               required
             />
           </div>
+          <label htmlFor="message" style={visuallyHiddenStyle}>Votre message</label>
           <textarea
+            id="message"
             name="message"
             placeholder="VOTRE MESSAGE"
             style={textareaStyle}
@@ -93,11 +98,15 @@ const Contact = () => {
           ></textarea>
 
           {status && (
-            <p style={{
-              color: status.includes('Erreur') || status.includes('Impossible') ? '#d9534f' : '#5cb85c',
-              fontWeight: 'bold',
-              marginTop: '10px'
-            }}>
+            <p
+              role="status"
+              aria-live="polite"
+              style={{
+                color: status.includes('Erreur') || status.includes('Impossible') ? '#d9534f' : '#5cb85c',
+                fontWeight: 'bold',
+                marginTop: '10px'
+              }}
+            >
               {status}
             </p>
           )}
@@ -172,6 +181,18 @@ const buttonStyle = {
   borderRadius: '100px',
   border: 'none',
   cursor: 'pointer',
+};
+
+const visuallyHiddenStyle = {
+  position: 'absolute',
+  width: '1px',
+  height: '1px',
+  padding: 0,
+  margin: '-1px',
+  overflow: 'hidden',
+  clip: 'rect(0,0,0,0)',
+  whiteSpace: 'nowrap',
+  border: 0,
 };
 
 export default Contact;

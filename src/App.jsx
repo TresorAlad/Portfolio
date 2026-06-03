@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Portfolio from './components/Portfolio';
@@ -14,9 +13,9 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <About />
         <Portfolio />
         <Certificates />
-        <About />
         <Skills />
         <Contact />
       </main>

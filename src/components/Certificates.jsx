@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import voyageImg from '../assets/certificats/Voyage.jpg';
@@ -128,7 +128,7 @@ const Certificates = () => {
   const displayedCerts = showAll ? allCerts : allCerts.slice(0, 6);
 
   return (
-    <section id="certificates" className="section-gray" style={sectionStyle}>
+    <section id="certificates" style={sectionStyle}>
       <div className="container">
         <motion.h2
           className="section-title"
@@ -144,6 +144,7 @@ const Certificates = () => {
           style={sectionDescStyle}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
           Ce sont les certificats que j'ai obtenus suite à mes apprentissages continus dans le domaine du numérique.
@@ -151,7 +152,7 @@ const Certificates = () => {
 
         <div className="certs-grid" style={gridStyle}>
           <AnimatePresence mode="popLayout">
-            {displayedCerts.map((cert, index) => (
+            {displayedCerts.map((cert) => (
               <motion.div
                 key={cert.id}
                 className="cert-card"
@@ -172,7 +173,7 @@ const Certificates = () => {
                       <p style={{ textAlign: 'center', padding: '20px', color: '#888' }}>PDF</p>
                     </object>
                   ) : (
-                    <img src={cert.image} alt={cert.title} style={certImgStyle} />
+                    <img src={cert.image} alt={cert.title} style={certImgStyle} loading="lazy" />
                   )}
                 </div>
                 <div style={certContentStyle}>
@@ -188,6 +189,7 @@ const Certificates = () => {
         {!showAll && allCerts.length > 6 && (
           <div style={buttonContainerStyle}>
             <button
+              type="button"
               className="btn-premium"
               onClick={() => setShowAll(true)}
               style={showMoreButtonStyle}

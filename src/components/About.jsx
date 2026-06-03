@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -26,12 +25,6 @@ const About = () => {
             académiques (<strong>Imperial College London</strong>, <strong>University of London</strong>) avec
             une pratique rigoureuse en Python, NumPy et Jupyter pour bâtir une expertise durable en IA appliquée.
           </p>
-          <motion.div
-            style={ctaStyle}
-            whileHover={{ scale: 1.05 }}
-          >
-            <a href="#portfolio" className="btn-premium">DÉCOUVREZ MES PROJETS</a>
-          </motion.div>
         </div>
       </motion.div>
     </section>
@@ -51,9 +44,5 @@ const paragraphStyle = {
   marginBottom: '30px',
 };
 
-const ctaStyle = {
-  marginTop: '40px',
-  display: 'inline-block',
-};
 
 export default About;

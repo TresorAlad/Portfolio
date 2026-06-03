@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Importation des images des projets
@@ -82,7 +82,7 @@ const Portfolio = () => {
   const displayedProjects = showAll ? allProjects : allProjects.slice(0, 6);
 
   return (
-    <section id="portfolio" className="portfolio-section" style={{ backgroundColor: '#000', color: 'white', padding: '100px 0' }}>
+    <section id="portfolio" className="portfolio-section">
       <div className="container">
         <motion.h2 
           className="section-title"
@@ -98,6 +98,7 @@ const Portfolio = () => {
           style={sectionDescStyle}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
           Projets combinant IA, analyse de données, développement backend et modélisation de bases de données.
@@ -105,19 +106,20 @@ const Portfolio = () => {
 
         <div className="portfolio-grid" style={gridStyle}>
           <AnimatePresence mode="popLayout">
-            {displayedProjects.map((proj, index) => (
+            {displayedProjects.map((proj) => (
               <motion.div 
                 key={proj.id} 
                 className="project-card" 
                 style={cardStyle}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 whileHover={{ y: -10 }}
               >
                 <div style={imgWrapperStyle}>
-                  <img src={proj.image} alt={proj.title} style={imgStyle} />
+                  <img src={proj.image} alt={proj.title} style={imgStyle} loading="lazy" />
                 </div>
                 <div style={cardContentStyle}>
                   <h4 style={cardTitleStyle}>{proj.title}</h4>
@@ -159,7 +161,7 @@ const Portfolio = () => {
 
 const sectionDescStyle = {
   fontSize: '18px',
-  color: '#919191',
+  color: 'var(--color-text-gray)',
   maxWidth: '600px',
   lineHeight: '1.6',
   marginBottom: '60px',
@@ -210,7 +212,7 @@ const cardTitleStyle = {
 
 const cardDescStyle = {
   fontSize: '14px',
-  color: '#919191',
+  color: 'var(--color-text-gray)',
   marginBottom: '25px',
   lineHeight: '1.6',
   flexGrow: 1,

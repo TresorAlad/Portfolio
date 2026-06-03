@@ -7,11 +7,14 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleKeyDown = (e) => { if (e.key === 'Escape') setMobileMenuOpen(false); };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
@@ -25,25 +28,35 @@ const Header = () => {
   return (
     <header className={`${scrolled ? 'header-scrolled' : ''} ${mobileMenuOpen ? 'menu-open' : ''}`}>
       <div className="container nav-container">
-        {/* Logo avec votre photo */}
-        <div className="logo" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); closeMenu(); }}>
+        <button
+          className="logo"
+          onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); closeMenu(); }}
+          aria-label="Retour en haut de page"
+          style={{ background: 'none', border: 'none', padding: 0 }}
+        >
           <img src={profileImg} alt="Trésor ALADE" className="logo-img" />
-        </div>
+        </button>
 
-        {/* Bouton Hamburger Mobile (Les trois barres) */}
-        <div className={`mobile-toggle ${mobileMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+        <button
+          type="button"
+          className={`mobile-toggle ${mobileMenuOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+          aria-label={mobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-expanded={mobileMenuOpen}
+          style={{ background: 'none', border: 'none', padding: 0 }}
+        >
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
-        </div>
+        </button>
 
         {/* Liens de navigation (Desktop) */}
         <nav className="nav-links desktop-only">
-          <a href="#about">About</a>
+          <a href="#about">À propos</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#certificates">Certifications</a>
-          <a href="#skills">Skills</a>
-          <button className="btn-header" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>CONTACT ME</button>
+          <a href="#skills">Compétences</a>
+          <button className="btn-header" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>ME CONTACTER</button>
         </nav>
 
         {/* Menu Mobile (Slide out) */}
@@ -57,11 +70,11 @@ const Header = () => {
               variants={menuVariants}
             >
               <div className="mobile-nav-links">
-                <a href="#about" onClick={closeMenu}>About</a>
+                <a href="#about" onClick={closeMenu}>À propos</a>
                 <a href="#portfolio" onClick={closeMenu}>Portfolio</a>
                 <a href="#certificates" onClick={closeMenu}>Certifications</a>
-                <a href="#skills" onClick={closeMenu}>Skills</a>
-                <button className="btn-premium" onClick={() => { document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); closeMenu(); }}>CONTACT ME</button>
+                <a href="#skills" onClick={closeMenu}>Compétences</a>
+                <button className="btn-premium" onClick={() => { document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); closeMenu(); }}>ME CONTACTER</button>
               </div>
             </motion.nav>
           )}

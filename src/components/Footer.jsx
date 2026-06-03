@@ -1,12 +1,11 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'GitHub', icon: 'bx bxl-github', url: 'https://github.com/TresorAlad' },
-    { name: 'LinkedIn', icon: 'bx bxl-linkedin', url: 'https://linkedin.com/in/tresor-alade/' },
+    { name: 'GitHub de Trésor ALADE', icon: 'bx bxl-github', url: 'https://github.com/TresorAlad' },
+    { name: 'LinkedIn de Trésor ALADE', icon: 'bx bxl-linkedin', url: 'https://linkedin.com/in/tresor-alade/' },
   ];
 
   return (
@@ -21,8 +20,9 @@ const Footer = () => {
             style={iconLinkStyle}
             whileHover={{ y: -5, color: '#FFFFFF' }}
             transition={{ duration: 0.3 }}
+            aria-label={link.name}
           >
-            <i className={link.icon} style={iconFontSize}></i>
+            <i className={link.icon} style={iconFontSize} aria-hidden="true"></i>
           </motion.a>
         ))}
       </div>
@@ -49,7 +49,7 @@ const socialGroupStyle = {
 };
 
 const iconLinkStyle = {
-  color: '#919191', /* Gris discret par défaut */
+  color: 'var(--color-text-gray)',
   textDecoration: 'none',
   transition: 'color 0.3s ease',
 };
