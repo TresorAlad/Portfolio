@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Importation des images des certificats pour que Vite les gère correctement
 import voyageImg from '../assets/certificats/Voyage.jpg';
 import databaseModelImg from '../assets/certificats/Modelisation database.jpg';
 import oracleAdminImg from '../assets/certificats/Administration oracle.jpg';
@@ -10,6 +9,11 @@ import promptImg from '../assets/certificats/prompt.png';
 import mlhCertImg from '../assets/certificats/MLH Certification.png';
 import vibeCodingImg from '../assets/certificats/VibeCoding.jpg';
 import golangCertImg from '../assets/certificats/certification_golang.jpeg';
+import probStatPdf from '../assets/certificats/Coursera E68047B9ZJMU.pdf';
+import hypothesisPdf from '../assets/certificats/Coursera 4WXLJ26EY0CY.pdf';
+import algebraPdf from '../assets/certificats/Coursera NUKQWGHGU4K9.pdf';
+import pcaPdf from '../assets/certificats/Coursera 9BRPIBE4N87C.pdf';
+import multivariatePdf from '../assets/certificats/Coursera VV9CLWXAWOQA.pdf';
 
 const Certificates = () => {
   const [showAll, setShowAll] = useState(false);
@@ -17,54 +21,46 @@ const Certificates = () => {
   const allCerts = [
     {
       id: 1,
-      title: "Voyage dans le monde des BDD",
-      org: "Udemy",
-      year: "2026",
-      image: voyageImg,
-      link: "https://www.udemy.com/certificate/UC-d7d58ee9-6b8b-48d3-a70b-e786310a07f8/",
+      title: "Probability and Statistics: To p or not to p?",
+      org: "Coursera - University of London",
+      year: "Mai 2026",
+      pdf: probStatPdf,
+      link: "https://www.coursera.org/account/accomplishments/verify/E68047B9ZJMU",
     },
     {
       id: 2,
-      title: "Modélisation de base de données",
-      org: "LinkedIn Learning",
-      year: "2026",
-      image: databaseModelImg,
-      link: "https://www.linkedin.com/learning/certificates/69f2cb265336c142e1cc3d3a76852472f486890f721145342bcecf79aba72723?trk=share_certificate",
+      title: "Introduction to Statistical Analysis: Hypothesis Testing",
+      org: "Coursera - SAS",
+      year: "Mai 2026",
+      pdf: hypothesisPdf,
+      link: "https://www.coursera.org/account/accomplishments/verify/4WXLJ26EY0CY",
     },
     {
       id: 3,
-      title: "Administration Oracle",
-      org: "LinkedIn Learning",
-      year: "2026",
-      image: oracleAdminImg,
-      link: "https://www.linkedin.com/learning/certificates/4421288fa80895c565b15634e2687dbd198e56c2993291e354a0c660a8910c6b?trk=share_certificate",
+      title: "Algebra and Differential Calculus for Data Science",
+      org: "Coursera - University of Colorado Boulder",
+      year: "Mai 2026",
+      pdf: algebraPdf,
+      link: "https://www.coursera.org/account/accomplishments/verify/NUKQWGHGU4K9",
     },
     {
       id: 4,
-      title: "Modélisation UML",
-      org: "LinkedIn Learning",
-      year: "2026",
-      image: umlModelImg,
-      link: "https://www.linkedin.com/learning/certificates/103b4440d4afd48f2d8577fa21e053e2ee81cedb9a5278375178ffca3e2ac61f?trk=share_certificate",
+      title: "Mathematics for Machine Learning: PCA",
+      org: "Coursera - Imperial College London",
+      year: "Mai 2026",
+      pdf: pcaPdf,
+      link: "https://www.coursera.org/account/accomplishments/verify/9BRPIBE4N87C",
     },
     {
       id: 5,
-      title: "Prompt Engineering",
-      org: "Sololearn",
-      year: "2026",
-      image: promptImg,
-      link: "https://www.sololearn.com/certificates/CC-QTLJFCV4",
+      title: "Mathematics for Machine Learning: Multivariate Calculus",
+      org: "Coursera - Imperial College London",
+      year: "Mai 2026",
+      pdf: multivariatePdf,
+      link: "https://www.coursera.org/account/accomplishments/verify/VV9CLWXAWOQA",
     },
     {
       id: 6,
-      title: "MLH Hackaton 2026",
-      org: "MLH",
-      year: "2026",
-      image: mlhCertImg,
-      link: "https://drive.google.com/file/d/1YUuhGAh6h9PB_A-VhDmLOaETQTUh87WZ/view?usp=sharing",
-    },
-    {
-      id: 7,
       title: "Vibe Coding",
       org: "Sololearn",
       year: "2026",
@@ -72,13 +68,61 @@ const Certificates = () => {
       link: "https://www.sololearn.com/certificates/CC-1DTZ4THF",
     },
     {
+      id: 7,
+      title: "MLH Hackaton 2026",
+      org: "MLH",
+      year: "2026",
+      image: mlhCertImg,
+      link: "https://drive.google.com/file/d/1YUuhGAh6h9PB_A-VhDmLOaETQTUh87WZ/view?usp=sharing",
+    },
+    {
       id: 8,
+      title: "Prompt Engineering",
+      org: "Sololearn",
+      year: "2026",
+      image: promptImg,
+      link: "https://www.sololearn.com/certificates/CC-QTLJFCV4",
+    },
+    {
+      id: 9,
+      title: "Voyage dans le monde des BDD",
+      org: "Udemy",
+      year: "2026",
+      image: voyageImg,
+      link: "https://www.udemy.com/certificate/UC-d7d58ee9-6b8b-48d3-a70b-e786310a07f8/",
+    },
+    {
+      id: 10,
+      title: "Modélisation UML",
+      org: "LinkedIn Learning",
+      year: "2026",
+      image: umlModelImg,
+      link: "https://www.linkedin.com/learning/certificates/103b4440d4afd48f2d8577fa21e053e2ee81cedb9a5278375178ffca3e2ac61f?trk=share_certificate",
+    },
+    {
+      id: 11,
+      title: "Administration Oracle",
+      org: "LinkedIn Learning",
+      year: "2026",
+      image: oracleAdminImg,
+      link: "https://www.linkedin.com/learning/certificates/4421288fa80895c565b15634e2687dbd198e56c2993291e354a0c660a8910c6b?trk=share_certificate",
+    },
+    {
+      id: 12,
+      title: "Modélisation de base de données",
+      org: "LinkedIn Learning",
+      year: "2026",
+      image: databaseModelImg,
+      link: "https://www.linkedin.com/learning/certificates/69f2cb265336c142e1cc3d3a76852472f486890f721145342bcecf79aba72723?trk=share_certificate",
+    },
+    {
+      id: 13,
       title: "Essentiel Golang",
       org: "LinkedIn Learning",
       year: "2025",
       image: golangCertImg,
       link: "https://www.linkedin.com/learning/certificates/18e63ec4bc7a75219ff3a219b5237277e9c2f66c73cfc5ce38932c3d31e20e84",
-    }
+    },
   ];
 
   const displayedCerts = showAll ? allCerts : allCerts.slice(0, 6);
@@ -119,7 +163,17 @@ const Certificates = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <div style={certImgWrapperStyle}>
-                  <img src={cert.image} alt={cert.title} style={certImgStyle} />
+                  {cert.pdf ? (
+                    <object
+                      data={cert.pdf}
+                      type="application/pdf"
+                      style={certImgStyle}
+                    >
+                      <p style={{ textAlign: 'center', padding: '20px', color: '#888' }}>PDF</p>
+                    </object>
+                  ) : (
+                    <img src={cert.image} alt={cert.title} style={certImgStyle} />
+                  )}
                 </div>
                 <div style={certContentStyle}>
                   <h3 style={certTitleStyle}>{cert.title}</h3>

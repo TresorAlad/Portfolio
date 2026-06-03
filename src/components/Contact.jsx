@@ -59,7 +59,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Travaillons ensemble ! Laissez-moi un message.
+          Une opportunité, une collaboration ou juste envie d'échanger ? Laissez-moi un message.
         </motion.p>
 
         <form style={formStyle} onSubmit={handleSubmit}>

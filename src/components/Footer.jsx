@@ -42,20 +42,6 @@ const footerStyle = {
   borderTop: '1px solid #222',
 };
 
-const containerStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  gap: '40px',
-};
-
-const logoStyle = {
-  fontSize: '28px',
-  fontWeight: '800',
-  letterSpacing: '-1px',
-  cursor: 'pointer',
-};
-
 const socialGroupStyle = {
   display: 'flex',
   gap: '30px',

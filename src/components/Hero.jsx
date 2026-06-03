@@ -27,11 +27,11 @@ const Hero = () => {
         <div className="hero-content">
           <motion.p variants={itemVariants} className="hero-text-small">Salut, je suis</motion.p>
           <motion.h1 variants={itemVariants} className="hero-name">Trésor ALADE</motion.h1>
-          <motion.p variants={itemVariants} className="hero-title">Développeur Backend JR. / Aspirant Data Eng.</motion.p>
+          <motion.p variants={itemVariants} className="hero-title">AI Engineer & Data Scientist en apprentissage</motion.p>
 
           <motion.div variants={itemVariants} className="social-icons" style={socialGroupStyle}>
             <motion.a
-              href="https://drive.google.com/file/d/10Ay2UpVUx1d4OpIpeunhMYuZM_EYHgsA/view?usp=sharing"
+              href="https://drive.google.com/file/d/1ckRwZsWM5G-TEKY28aINVZcBreZidPXg/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="cv-button"

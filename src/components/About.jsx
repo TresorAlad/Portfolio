@@ -14,15 +14,17 @@ const About = () => {
         <h2 className="section-title">À propos de moi</h2>
         <div className="about-content" style={aboutContentStyle}>
           <p style={paragraphStyle}>
-            Actuellement étudiant en <strong>Licence 2 IA et Big Data à l'ESGIS TOGO</strong>,
-            ma démarche repose sur une vision claire : devenir un <strong>Data Engineer</strong> accompli.
-            Passionné par la logique et l'analyse, je m'investis aujourd'hui dans un double apprentissage
-            intensif combinant le <strong>Développement Backend</strong> et l'<strong>Administration de Bases de Données</strong>.
+            Étudiant en <strong>Licence 2 IA et Big Data à l'ESGIS TOGO</strong>, je me construis
+            un parcours solide en <strong>Intelligence Artificielle</strong> et <strong>Data Science</strong>.
+            Passionné par la modélisation mathématique et l'analyse de données, j'approfondis
+            activement les fondements : algèbre linéaire, calcul différentiel, statistiques et probabilités,
+            au service des algorithmes de Machine Learning.
           </p>
           <p style={paragraphStyle}>
-            Pour moi, maîtriser le code ne suffit pas sans une compréhension profonde des architectures de données.
-            Je développe des solutions robustes et scalables, tout en approfondissant mes connaissances techniques
-            sur la gestion, l'optimisation et la sécurité des environnements SQL et NoSQL.
+            Mon objectif : maîtriser l'ensemble de la chaîne - de la collecte et la transformation des données
+            jusqu'à la conception et le déploiement de modèles intelligents. Je combine des certifications
+            académiques (<strong>Imperial College London</strong>, <strong>University of London</strong>) avec
+            une pratique rigoureuse en Python, NumPy et Jupyter pour bâtir une expertise durable en IA appliquée.
           </p>
           <motion.div
             style={ctaStyle}

@@ -7,6 +7,8 @@ import pitchAiImg from '../assets/projects/pitch-i.png';
 import meteoImg from '../assets/projects/meteo.png';
 import clubVideoImg from '../assets/projects/clubvideo.png';
 import salleImg from '../assets/projects/salle.png';
+import eventHubImg from '../assets/projects/EventHub.jpeg';
+import chainCacaoImg from '../assets/projects/chaincacao.png';
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
@@ -14,48 +16,69 @@ const Portfolio = () => {
   const allProjects = [
     {
       id: 1,
-      title: "Gestion Aéroport & Vols",
-      desc: "Modélisation complète d'un système de gestion aéroportuaire avec diagramme de classes UML.",
-      image: aeroportImg,
-      github: "https://github.com/TresorAlad", /* Lien générique si pas spécifié */
-      live: "#"
+      title: "ChainCacao",
+      desc: "Plateforme de traçabilité du cacao de la ferme jusqu'à l'exportation, de façon infalsifiable. Paiement automatique de l'agriculteur dès réception du produit.",
+      tags: ["AWS EC2" , "Next.js" , "Go", "Web3", "Hyperledger Fabric"],
+      image: chainCacaoImg,
+      github: "https://github.com/TresorAlad",
+      live: "https://cacaombh.vercel.app/"
     },
     {
       id: 2,
+      title: "EventHub",
+      desc: "Application mobile de gestion des événements tech au Togo. Découvrez, suivez et participez aux événements de la communauté tech locale. Bientôt disponible sur le Play Store.",
+      tags: ["PostgreSQL", "React Native", "Expo", "Node.js"],
+      image: eventHubImg,
+      github: "https://github.com/TresorAlad",
+      live: "https://github.com/TresorAlad/EventHub"
+    },
+    {
+      id: 3,
       title: "Pitch AI",
-      desc: "Plateforme d'analyse de projets par IA : problèmes, solutions, Business Model et canaux de diffusion.",
+      desc: "Plateforme d'analyse de projets par IA : identification des problèmes, solutions, Business Model Canvas et canaux de diffusion générés automatiquement.",
+      tags: ["Python", "AI", "NLP", "Flask"],
       image: pitchAiImg,
       github: "https://github.com/TresorAlad/Pitch-IA.git",
       live: "https://app-pitch.onrender.com"
     },
     {
-      id: 3,
+      id: 4,
       title: "Météo Temps Réel",
-      desc: "Application de visualisation des données météorologiques mondiales en temps réel.",
+      desc: "Application de visualisation des données météorologiques mondiales en temps réel via API REST.",
+      tags: ["Golang", "JavaScript", "API REST"],
       image: meteoImg,
       github: "https://github.com/TresorAlad/Meteo-Go-js.git",
       live: "https://meteodev.onrender.com/"
     },
     {
-      id: 4,
+      id: 5,
+      title: "Gestion de Salles Univ.",
+      desc: "Application Desktop de réservation et d'administration des salles universitaires avec gestion des conflits de planning.",
+      tags: ["Java", "JavaFX", "Maven", "SQLite"],
+      image: salleImg,
+      github: "https://github.com/TresorAlad/SystemeGestion.git",
+      live: "#"
+    },
+    {
+      id: 6,
       title: "Gestion Vidéo Club",
-      desc: "Solution Desktop (JavaFX/SQLite) pour la gestion des locations, stocks et membres d'un Vidéo Club.",
+      desc: "Solution Desktop pour la gestion des locations, des stocks et des membres d'un Vidéo Club avec base de données embarquée.",
+      tags: ["Java", "JavaFX", "SQLite"],
       image: clubVideoImg,
       github: "https://github.com/TresorAlad/Club-Video.git",
       live: "#"
     },
     {
-      id: 5,
-      title: "Gestion de Salles Univ.",
-      desc: "Application Desktop pour l'administration des salles universitaires et la gestion des réservations.",
-      image: salleImg,
-      github: "https://github.com/TresorAlad/SystemeGestion.git",
+      id: 7,
+      title: "Gestion Aéroport & Vols",
+      desc: "Modélisation complète d'un système de gestion aéroportuaire : MCD, MLD, MPD et diagramme de classes UML.",
+      tags: ["UML", "Modelio", "SQL", "MCD/MLD"],
+      image: aeroportImg,
+      github: "https://github.com/TresorAlad",
       live: "#"
-    }
+    },
   ];
 
-  // Actuellement 5 projets réels, donc pas besoin de limitation immédiate, 
-  // mais on garde la structure pour les futurs ajouts.
   const displayedProjects = showAll ? allProjects : allProjects.slice(0, 6);
 
   return (
@@ -77,7 +100,7 @@ const Portfolio = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          Découvrez une sélection de mes travaux récents en développement Java, architectures SQL et solutions basées sur l'IA.
+          Projets combinant IA, analyse de données, développement backend et modélisation de bases de données.
         </motion.p>
 
         <div className="portfolio-grid" style={gridStyle}>
@@ -99,6 +122,13 @@ const Portfolio = () => {
                 <div style={cardContentStyle}>
                   <h4 style={cardTitleStyle}>{proj.title}</h4>
                   <p style={cardDescStyle}>{proj.desc}</p>
+                  {proj.tags && (
+                    <div style={tagsStyle}>
+                      {proj.tags.map((tag, i) => (
+                        <span key={i} style={tagBadgeStyle}>{tag}</span>
+                      ))}
+                    </div>
+                  )}
                   <div style={btnGroupStyle}>
                     <a href={proj.github} target="_blank" rel="noopener noreferrer" className="btn-premium" style={smallBtnStyle}>GITHUB</a>
                     {proj.live !== "#" && (
@@ -184,6 +214,24 @@ const cardDescStyle = {
   marginBottom: '25px',
   lineHeight: '1.6',
   flexGrow: 1,
+};
+
+const tagsStyle = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '8px',
+  marginBottom: '20px',
+};
+
+const tagBadgeStyle = {
+  fontSize: '10px',
+  fontWeight: '800',
+  letterSpacing: '1px',
+  padding: '4px 10px',
+  borderRadius: '100px',
+  border: '1px solid #333',
+  color: '#919191',
+  textTransform: 'uppercase',
 };
 
 const btnGroupStyle = {
