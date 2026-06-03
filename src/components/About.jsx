@@ -17,13 +17,13 @@ const About = () => {
             un parcours solide en <strong>Intelligence Artificielle</strong> et <strong>Data Science</strong>.
             Passionné par la modélisation mathématique et l'analyse de données, j'approfondis
             activement les fondements : algèbre linéaire, calcul différentiel, statistiques et probabilités,
-            au service des algorithmes de Machine Learning.
+            au service des algorithmes de Machine Learning - certifié par <strong>Imperial College London</strong> et l'<strong>University of London</strong>.
           </p>
           <p style={paragraphStyle}>
-            Mon objectif : maîtriser l'ensemble de la chaîne - de la collecte et la transformation des données
-            jusqu'à la conception et le déploiement de modèles intelligents. Je combine des certifications
-            académiques (<strong>Imperial College London</strong>, <strong>University of London</strong>) avec
-            une pratique rigoureuse en Python, NumPy et Jupyter pour bâtir une expertise durable en IA appliquée.
+            En parallèle, je développe mes compétences en <strong>Python, NumPy, Pandas et Jupyter</strong>,
+            tout en explorant l'automatisation avec <strong>n8n</strong> et les frameworks de Deep Learning
+            comme TensorFlow et PyTorch. Mon objectif : maîtriser toute la chaîne - de la donnée brute
+            au modèle intelligent déployé.
           </p>
         </div>
       </motion.div>

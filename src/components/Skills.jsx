@@ -2,33 +2,31 @@ import { motion } from 'framer-motion';
 
 const Skills = () => {
   const currentSkills = [
-    { name: 'Python', icon: 'devicon-python-plain colored' },
-    { name: 'NumPy', icon: 'devicon-numpy-plain colored' },
-    { name: 'Jupyter', icon: 'devicon-jupyter-plain colored' },
     { name: 'Git', icon: 'devicon-git-plain colored' },
     { name: 'GitHub', icon: 'devicon-github-original colored' },
-    { name: 'Pandas', icon: 'devicon-pandas-plain colored' },
-    { name: 'UML / Modelio', icon: 'bx bx-shape-square', color: '#3A86FF' },
+    { name: 'GitLab', icon: 'devicon-gitlab-plain colored' },
     { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
-  ];
-
-  const learningSkills = [
-    { name: 'TensorFlow', icon: 'devicon-tensorflow-original colored' },
-    { name: 'Scikit-learn', icon: 'devicon-scikitlearn-plain colored' },
-    { name: 'PyTorch', icon: 'devicon-pytorch-plain colored' },
-    { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
-    { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' },
-    { name: 'Azure', icon: 'devicon-azure-plain colored' },
-    { name: 'Golang', icon: 'devicon-go-original-wordmark colored' },
-  ];
-
-  const backendSkills = [
     { name: 'React', icon: 'devicon-react-original colored' },
     { name: 'Firebase', icon: 'devicon-firebase-plain colored' },
     { name: 'Supabase', icon: 'devicon-supabase-plain colored' },
     { name: 'Postman', icon: 'devicon-postman-plain colored' },
-    { name: 'GitLab', icon: 'devicon-gitlab-plain colored' },
     { name: 'Docker', icon: 'devicon-docker-plain colored' },
+    { name: 'UML / Modelio', icon: 'bx bx-shape-square', color: '#3A86FF' },
+  ];
+
+  const learningSkills = [
+    { name: 'Python', icon: 'devicon-python-plain colored' },
+    { name: 'NumPy', icon: 'devicon-numpy-plain colored' },
+    { name: 'Jupyter', icon: 'devicon-jupyter-plain colored' },
+    { name: 'Pandas', icon: 'devicon-pandas-plain colored' },
+    { name: 'TensorFlow', icon: 'devicon-tensorflow-original colored' },
+    { name: 'Scikit-learn', icon: 'devicon-scikitlearn-plain colored' },
+    { name: 'PyTorch', icon: 'devicon-pytorch-plain colored' },
+    { name: 'n8n', icon: 'bx bx-network-chart', color: '#EA4B71' },
+    { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
+    { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' },
+    { name: 'Azure', icon: 'devicon-azure-plain colored' },
+    { name: 'Golang', icon: 'devicon-go-original-wordmark colored' },
   ];
 
   const containerVariants = {
@@ -117,35 +115,6 @@ const Skills = () => {
             </motion.div>
           </div>
 
-          {/* Section: Backend & Outils */}
-          <div style={skillsColumnStyle}>
-            <h3 style={skillsTitleStyle}>BACKEND & OUTILS</h3>
-            <motion.div
-              style={gridStyle}
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {backendSkills.map((skill, index) => (
-                <motion.div
-                  key={index}
-                  style={skillCardStyle}
-                  variants={itemVariants}
-                  whileHover={{ y: -8, backgroundColor: 'white', scale: 1.05 }}
-                >
-                  <i
-                    className={skill.icon}
-                    style={{
-                      fontSize: '52px',
-                      color: skill.color ? skill.color : undefined
-                    }}
-                  ></i>
-                  <span style={skillNameStyle}>{skill.name}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
         </div>
       </div>
     </section>
