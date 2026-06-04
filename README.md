@@ -40,7 +40,7 @@ Portfolio personnel de **Trésor ALADE**, étudiant en Licence 2 IA et Big Data 
 
 2. Installer les dépendances :
    ```bash
-   pnpm install
+   npm install
    ```
 
 3. Configurer les variables d'environnement — créer un fichier `.env` à la racine :
@@ -52,7 +52,7 @@ Portfolio personnel de **Trésor ALADE**, étudiant en Licence 2 IA et Big Data 
 
 4. Lancer le site et le serveur email en même temps :
    ```bash
-   pnpm dev:all
+   npm dev:all
    ```
 
 ---
