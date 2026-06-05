@@ -52,7 +52,7 @@ Portfolio personnel de **Trésor ALADE**, étudiant en Licence 2 IA et Big Data 
 
 4. Lancer le site et le serveur email en même temps :
    ```bash
-   npm dev:all
+   pnpm dev:all
    ```
 
 ---

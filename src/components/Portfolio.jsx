@@ -30,16 +30,16 @@ const Portfolio = () => {
       tags: ["PostgreSQL", "React Native", "Expo", "Node.js"],
       image: eventHubImg,
       github: "https://github.com/TresorAlad",
-      live: "https://github.com/TresorAlad/EventHub"
+      live: "#"
     },
     {
       id: 3,
-      title: "Pitch AI",
-      desc: "Plateforme d'analyse de projets par IA : identification des problèmes, solutions, Business Model Canvas et canaux de diffusion générés automatiquement.",
-      tags: ["Python", "AI", "NLP", "Flask"],
+      title: "Pitch AI V2",
+      desc: "Décrivez votre idée en 2 minutes et recevez un pitch structuré en 6 sections + un score de viabilité, généré par IA et ML. Gratuit, sans compte.",
+      tags: ["IA", "ML", "Python", "NLP"],
       image: pitchAiImg,
       github: "https://github.com/TresorAlad/Pitch-IA.git",
-      live: "https://app-pitch.onrender.com"
+      live: "https://pitch-ia.vercel.app"
     },
     {
       id: 4,
