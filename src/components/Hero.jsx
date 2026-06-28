@@ -30,7 +30,7 @@ const Hero = () => {
 
           <motion.div variants={itemVariants} className="social-icons" style={socialGroupStyle}>
             <motion.a
-              href="https://drive.google.com/file/d/1cxTFIKlx440P4nWrHv6_pKq-NNBdHatz/view?usp=sharing"
+              href="https://drive.google.com/file/d/1GGPhiW8n_jir_bfGYhWsIiVTmi7Ao79i/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="cv-button"
