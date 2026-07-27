@@ -22,7 +22,7 @@ const Portfolio = () => {
       tags: ["Next.js", "FastAPI", "PostgreSQL", "Qdrant", "RAG"],
       image: techMentorImg,
       github: "https://github.com/TresorAlad",
-      live: "https://techmentor-ai.vercel.app"
+      live: "https://techmentors.dev"
     },
     {
       id: 2,
