@@ -9,6 +9,7 @@ import clubVideoImg from '../assets/projects/clubvideo.png';
 import salleImg from '../assets/projects/salle.png';
 import eventHubImg from '../assets/projects/EventHub.jpeg';
 import chainCacaoImg from '../assets/projects/chaincacao.png';
+import techMentorImg from '../assets/projects/TechMentor AI.png';
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
@@ -16,6 +17,15 @@ const Portfolio = () => {
   const allProjects = [
     {
       id: 1,
+      title: "TechMentor AI",
+      desc: "Plateforme EdTech qui analyse un CV et un profil GitHub, identifie les écarts par rapport à un métier cible, génère une roadmap personnalisée et propose un mentor IA contextuel (RAG).",
+      tags: ["Next.js", "FastAPI", "PostgreSQL", "Qdrant", "RAG"],
+      image: techMentorImg,
+      github: "https://github.com/TresorAlad",
+      live: "https://techmentor-ai.vercel.app"
+    },
+    {
+      id: 2,
       title: "ChainCacao",
       desc: "Plateforme de traçabilité du cacao de la ferme jusqu'à l'exportation, de façon infalsifiable. Paiement automatique de l'agriculteur dès réception du produit.",
       tags: ["AWS EC2" , "Next.js" , "Go", "Web3", "Hyperledger Fabric"],
@@ -24,7 +34,7 @@ const Portfolio = () => {
       live: "https://cacaombh.vercel.app/"
     },
     {
-      id: 2,
+      id: 3,
       title: "EventHub",
       desc: "Application mobile de gestion des événements tech au Togo. Découvrez, suivez et participez aux événements de la communauté tech locale. Bientôt disponible sur le Play Store.",
       tags: ["PostgreSQL", "React Native", "Expo", "Node.js"],
@@ -33,7 +43,7 @@ const Portfolio = () => {
       live: "#"
     },
     {
-      id: 3,
+      id: 4,
       title: "Pitch AI V2",
       desc: "Décrivez votre idée en 2 minutes et recevez un pitch structuré en 6 sections + un score de viabilité, généré par IA et ML. Gratuit, sans compte.",
       tags: ["IA", "ML", "Python", "NLP"],
@@ -42,7 +52,7 @@ const Portfolio = () => {
       live: "https://pitch-ia.vercel.app"
     },
     {
-      id: 4,
+      id: 5,
       title: "Météo Temps Réel",
       desc: "Application de visualisation des données météorologiques mondiales en temps réel via API REST.",
       tags: ["Golang", "JavaScript", "API REST"],
@@ -51,7 +61,7 @@ const Portfolio = () => {
       live: "https://meteodev.onrender.com/"
     },
     {
-      id: 5,
+      id: 6,
       title: "Gestion de Salles Univ.",
       desc: "Application Desktop de réservation et d'administration des salles universitaires avec gestion des conflits de planning.",
       tags: ["Java", "JavaFX", "Maven", "SQLite"],
@@ -60,7 +70,7 @@ const Portfolio = () => {
       live: "#"
     },
     {
-      id: 6,
+      id: 7,
       title: "Gestion Vidéo Club",
       desc: "Solution Desktop pour la gestion des locations, des stocks et des membres d'un Vidéo Club avec base de données embarquée.",
       tags: ["Java", "JavaFX", "SQLite"],
@@ -69,7 +79,7 @@ const Portfolio = () => {
       live: "#"
     },
     {
-      id: 7,
+      id: 8,
       title: "Gestion Aéroport & Vols",
       desc: "Modélisation complète d'un système de gestion aéroportuaire : MCD, MLD, MPD et diagramme de classes UML.",
       tags: ["UML", "Modelio", "SQL", "MCD/MLD"],

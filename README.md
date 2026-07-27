@@ -15,8 +15,8 @@ Portfolio personnel de **Trésor ALADE**, étudiant en Licence 2 IA et Big Data 
 
 - **Hero** - Présentation et liens sociaux
 - **À propos** - Parcours IA/Data Science, certifications académiques
-- **Portfolio** - Projets : ChainCacao, EventHub, Pitch AI, Météo, Gestion de salles, etc.
-- **Certifications** - 13 certificats (Coursera, LinkedIn Learning, Sololearn, Udemy, MLH)
+- **Portfolio** - Projets : TechMentor AI, ChainCacao, EventHub, Pitch AI, Météo, Gestion de salles, etc.
+- **Certifications** - 16 certificats (Coursera, LinkedIn Learning, Sololearn, Udemy, MLH)
 - **Compétences** - Stack actuelle + technologies en apprentissage
 - **Contact** - Formulaire d'envoi d'email via Serverless Function
 

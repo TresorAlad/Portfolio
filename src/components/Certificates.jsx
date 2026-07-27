@@ -9,6 +9,9 @@ import promptImg from '../assets/certificats/prompt.png';
 import mlhCertImg from '../assets/certificats/MLH Certification.png';
 import vibeCodingImg from '../assets/certificats/VibeCoding.jpg';
 import golangCertImg from '../assets/certificats/certification_golang.jpeg';
+import linearRegressionImg from '../assets/certificats/Coursera QWZI8DJO3BPP.jpg';
+import dbaAdminImg from '../assets/certificats/Coursera Administration.jpg';
+import ragAgenticImg from '../assets/certificats/IBM RAG and Agentic AI.jpeg';
 import probStatPdf from '../assets/certificats/Coursera E68047B9ZJMU.pdf';
 import hypothesisPdf from '../assets/certificats/Coursera 4WXLJ26EY0CY.pdf';
 import algebraPdf from '../assets/certificats/Coursera NUKQWGHGU4K9.pdf';
@@ -21,6 +24,22 @@ const Certificates = () => {
   const allCerts = [
     {
       id: 1,
+      title: "IBM RAG and Agentic AI",
+      org: "Coursera - IBM",
+      year: "Juillet 2026",
+      image: ragAgenticImg,
+      link: "https://www.coursera.org/verify/professional-cert/VFAPDCQNSK1V",
+    },
+    {
+      id: 2,
+      title: "Linear Regression for Business Statistics",
+      org: "Coursera - Rice University",
+      year: "Juin 2026",
+      image: linearRegressionImg,
+      link: "https://www.coursera.org/account/accomplishments/verify/QWZI8DJO3BPP",
+    },
+    {
+      id: 3,
       title: "Probability and Statistics: To p or not to p?",
       org: "Coursera - University of London",
       year: "Mai 2026",
@@ -28,7 +47,7 @@ const Certificates = () => {
       link: "https://www.coursera.org/account/accomplishments/verify/E68047B9ZJMU",
     },
     {
-      id: 2,
+      id: 4,
       title: "Introduction to Statistical Analysis: Hypothesis Testing",
       org: "Coursera - SAS",
       year: "Mai 2026",
@@ -36,7 +55,7 @@ const Certificates = () => {
       link: "https://www.coursera.org/account/accomplishments/verify/4WXLJ26EY0CY",
     },
     {
-      id: 3,
+      id: 5,
       title: "Algebra and Differential Calculus for Data Science",
       org: "Coursera - University of Colorado Boulder",
       year: "Mai 2026",
@@ -44,7 +63,7 @@ const Certificates = () => {
       link: "https://www.coursera.org/account/accomplishments/verify/NUKQWGHGU4K9",
     },
     {
-      id: 4,
+      id: 6,
       title: "Mathematics for Machine Learning: PCA",
       org: "Coursera - Imperial College London",
       year: "Mai 2026",
@@ -52,7 +71,7 @@ const Certificates = () => {
       link: "https://www.coursera.org/account/accomplishments/verify/9BRPIBE4N87C",
     },
     {
-      id: 5,
+      id: 7,
       title: "Mathematics for Machine Learning: Multivariate Calculus",
       org: "Coursera - Imperial College London",
       year: "Mai 2026",
@@ -60,7 +79,15 @@ const Certificates = () => {
       link: "https://www.coursera.org/account/accomplishments/verify/VV9CLWXAWOQA",
     },
     {
-      id: 6,
+      id: 8,
+      title: "Relational Database Administration (DBA)",
+      org: "Coursera - IBM",
+      year: "Avril 2026",
+      image: dbaAdminImg,
+      link: "https://www.coursera.org/account/accomplishments/verify/211QSTSXE0CB",
+    },
+    {
+      id: 9,
       title: "Vibe Coding",
       org: "Sololearn",
       year: "2026",
@@ -68,7 +95,7 @@ const Certificates = () => {
       link: "https://www.sololearn.com/certificates/CC-1DTZ4THF",
     },
     {
-      id: 7,
+      id: 10,
       title: "MLH Hackaton 2026",
       org: "MLH",
       year: "2026",
@@ -76,7 +103,7 @@ const Certificates = () => {
       link: "https://drive.google.com/file/d/1YUuhGAh6h9PB_A-VhDmLOaETQTUh87WZ/view?usp=sharing",
     },
     {
-      id: 8,
+      id: 11,
       title: "Prompt Engineering",
       org: "Sololearn",
       year: "2026",
@@ -84,7 +111,7 @@ const Certificates = () => {
       link: "https://www.sololearn.com/certificates/CC-QTLJFCV4",
     },
     {
-      id: 9,
+      id: 12,
       title: "Voyage dans le monde des BDD",
       org: "Udemy",
       year: "2026",
@@ -92,7 +119,7 @@ const Certificates = () => {
       link: "https://www.udemy.com/certificate/UC-d7d58ee9-6b8b-48d3-a70b-e786310a07f8/",
     },
     {
-      id: 10,
+      id: 13,
       title: "Modélisation UML",
       org: "LinkedIn Learning",
       year: "2026",
@@ -100,7 +127,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/learning/certificates/103b4440d4afd48f2d8577fa21e053e2ee81cedb9a5278375178ffca3e2ac61f?trk=share_certificate",
     },
     {
-      id: 11,
+      id: 14,
       title: "Administration Oracle",
       org: "LinkedIn Learning",
       year: "2026",
@@ -108,7 +135,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/learning/certificates/4421288fa80895c565b15634e2687dbd198e56c2993291e354a0c660a8910c6b?trk=share_certificate",
     },
     {
-      id: 12,
+      id: 15,
       title: "Modélisation de base de données",
       org: "LinkedIn Learning",
       year: "2026",
@@ -116,7 +143,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/learning/certificates/69f2cb265336c142e1cc3d3a76852472f486890f721145342bcecf79aba72723?trk=share_certificate",
     },
     {
-      id: 13,
+      id: 16,
       title: "Essentiel Golang",
       org: "LinkedIn Learning",
       year: "2025",
