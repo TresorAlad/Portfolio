@@ -7,7 +7,7 @@ Portfolio personnel de **Trésor ALADE**, Junior AI & Data Engineer, étudiant e
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-ff69b4?logo=framer)
 ![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel)
 
-**Live** : [foliotresor.vercel.app](https://foliotresor.vercel.app)
+**Live** : [tresoralade.vercel.app](https://tresoralade.vercel.app)
 
 ---
 
