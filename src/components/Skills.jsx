@@ -2,31 +2,30 @@ import { motion } from 'framer-motion';
 
 const Skills = () => {
   const currentSkills = [
+    { name: 'Python', icon: 'devicon-python-plain colored' },
     { name: 'Git', icon: 'devicon-git-plain colored' },
-    { name: 'GitHub', icon: 'devicon-github-original colored' },
-    { name: 'GitLab', icon: 'devicon-gitlab-plain colored' },
-    { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
-    { name: 'React', icon: 'devicon-react-original colored' },
+    { name: 'Docker', icon: 'devicon-docker-plain colored' },
+    { name: 'LangChain', icon: 'bx bx-link', color: '#1C3C3C' },
+    { name: 'LangGraph', icon: 'bx bx-git-branch', color: '#1C3C3C' },
+    { name: 'LLM & GenAI', icon: 'bx bx-brain', color: '#3A86FF' },
+    { name: 'Data Engineering', icon: 'bx bx-data', color: '#3A86FF' },
+    { name: 'ETL / Pipelines', icon: 'bx bx-transfer-alt', color: '#3A86FF' },
     { name: 'Firebase', icon: 'devicon-firebase-plain colored' },
     { name: 'Supabase', icon: 'devicon-supabase-plain colored' },
-    { name: 'Postman', icon: 'devicon-postman-plain colored' },
-    { name: 'Docker', icon: 'devicon-docker-plain colored' },
-    { name: 'UML / Modelio', icon: 'bx bx-shape-square', color: '#3A86FF' },
+    { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
+    { name: 'React', icon: 'devicon-react-original colored' },
+    { name: 'GitHub', icon: 'devicon-github-original colored' },
   ];
 
   const learningSkills = [
-    { name: 'Python', icon: 'devicon-python-plain colored' },
     { name: 'NumPy', icon: 'devicon-numpy-plain colored' },
-    { name: 'Jupyter', icon: 'devicon-jupyter-plain colored' },
     { name: 'Pandas', icon: 'devicon-pandas-plain colored' },
-    { name: 'TensorFlow', icon: 'devicon-tensorflow-original colored' },
-    { name: 'Scikit-learn', icon: 'devicon-scikitlearn-plain colored' },
-    { name: 'PyTorch', icon: 'devicon-pytorch-plain colored' },
+    { name: 'Jupyter', icon: 'devicon-jupyter-plain colored' },
     { name: 'n8n', icon: 'bx bx-network-chart', color: '#EA4B71' },
-    { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
     { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' },
     { name: 'Azure', icon: 'devicon-azure-plain colored' },
     { name: 'Golang', icon: 'devicon-go-original-wordmark colored' },
+    { name: 'UML / Modelio', icon: 'bx bx-shape-square', color: '#3A86FF' },
   ];
 
   const containerVariants = {

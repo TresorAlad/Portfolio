@@ -1,6 +1,6 @@
 # Trésor ALADE | Portfolio
 
-Portfolio personnel de **Trésor ALADE**, étudiant en Licence 2 IA et Big Data à l'ESGIS TOGO - AI Engineer & Data Scientist en apprentissage.
+Portfolio personnel de **Trésor ALADE**, Junior AI & Data Engineer, étudiant en Licence 3 Intelligence Artificielle et Big Data à l'ESGIS Togo.
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite)
@@ -13,9 +13,9 @@ Portfolio personnel de **Trésor ALADE**, étudiant en Licence 2 IA et Big Data 
 
 ## Sections
 
-- **Hero** - Présentation et liens sociaux
-- **À propos** - Parcours IA/Data Science, certifications académiques
-- **Portfolio** - Projets : TechMentor AI, ChainCacao, EventHub, Pitch AI, Météo, Gestion de salles, etc.
+- **Hero** - Présentation, CV et liens sociaux
+- **À propos** - Parcours AI / Data Engineering
+- **Portfolio** - Projets : TechMentor AI, ƉeƉeFIA, ChainCacao, EventHub, Pitch AI, etc.
 - **Certifications** - 16 certificats (Coursera, LinkedIn Learning, Sololearn, Udemy, MLH)
 - **Compétences** - Stack actuelle + technologies en apprentissage
 - **Contact** - Formulaire d'envoi d'email via Serverless Function
@@ -43,7 +43,7 @@ Portfolio personnel de **Trésor ALADE**, étudiant en Licence 2 IA et Big Data 
    npm install
    ```
 
-3. Configurer les variables d'environnement — créer un fichier `.env` à la racine :
+3. Configurer les variables d'environnement - créer un fichier `.env` à la racine :
    ```env
    EMAIL_USER=votre_email@gmail.com
    EMAIL_PASS=votre_mot_de_passe_application_gmail
@@ -52,7 +52,7 @@ Portfolio personnel de **Trésor ALADE**, étudiant en Licence 2 IA et Big Data 
 
 4. Lancer le site et le serveur email en même temps :
    ```bash
-   pnpm dev:all
+   npm run dev
    ```
 
 ---

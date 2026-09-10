@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import profileImg from '../assets/tresorfolio.png';
+import profileImg from '../assets/tresorfolio.jpeg';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);

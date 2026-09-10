@@ -26,11 +26,11 @@ const Hero = () => {
         <div className="hero-content">
           <motion.p variants={itemVariants} className="hero-text-small">Salut, je suis</motion.p>
           <motion.h1 variants={itemVariants} className="hero-name">Trésor ALADE</motion.h1>
-          <motion.p variants={itemVariants} className="hero-title">AI Engineer & Data Scientist en apprentissage</motion.p>
+          <motion.p variants={itemVariants} className="hero-title">Junior AI & Data Engineer</motion.p>
 
           <motion.div variants={itemVariants} className="social-icons" style={socialGroupStyle}>
             <motion.a
-              href="https://drive.google.com/file/d/1PjfU5g33ZF8-WgwSypPhS8XtZxe5CFS1/view?usp=sharing"
+              href="https://drive.google.com/file/d/1SiREQ9EtbPiBA1GOH5YmFIW3yskuKWno/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="cv-button"

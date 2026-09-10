@@ -24,18 +24,18 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const data = await response.json();
+      const data = await response.json().catch(() => null);
 
-      if (data.success) {
+      if (response.ok && data?.success) {
         setStatus('Message envoyé avec succès !');
         setFormData({ name: '', email: '', message: '' });
-      } else {
-        setStatus('Erreur : ' + data.message);
+        return;
       }
+
+      setStatus(data?.message || "L'envoi a échoué. Réessayez dans un instant.");
     } catch (error) {
       console.error('Erreur:', error);
-      setStatus("Impossible d'envoyer le message. Vérifiez que le serveur est démarré.");
+      setStatus("Impossible d'envoyer le message. Réessayez dans un instant.");
     }
   };
 

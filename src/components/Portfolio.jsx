@@ -10,6 +10,7 @@ import salleImg from '../assets/projects/salle.png';
 import eventHubImg from '../assets/projects/EventHub.jpeg';
 import chainCacaoImg from '../assets/projects/chaincacao.png';
 import techMentorImg from '../assets/projects/TechMentor AI.png';
+import dedefiaImg from '../assets/projects/Gemini_Generated_Image_wr7flnwr7flnwr7f-removebg-preview.png';
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
@@ -18,23 +19,33 @@ const Portfolio = () => {
     {
       id: 1,
       title: "TechMentor AI",
-      desc: "Plateforme EdTech qui analyse un CV et un profil GitHub, identifie les écarts par rapport à un métier cible, génère une roadmap personnalisée et propose un mentor IA contextuel (RAG).",
-      tags: ["Next.js", "FastAPI", "PostgreSQL", "Qdrant", "RAG"],
+      desc: "Plateforme d'analyse de profils informatiques assistée par IA. Analyse des CV, GitHub et LinkedIn pour évaluer les compétences par rapport à un métier cible, puis génération de scores, roadmaps et recommandations de projets personnalisées.",
+      tags: ["React", "FastAPI", "RAG", "Vector Database", "Qdrant"],
       image: techMentorImg,
       github: "https://github.com/TresorAlad",
       live: "https://techmentors.dev"
     },
     {
       id: 2,
+      title: "ƉeƉeFIA",
+      desc: "Plateforme d'audit de sécurité assistée par IA. Automatisation de l'analyse des domaines et de leurs configurations, détection des vulnérabilités et génération de scores de sécurité avec recommandations correctives.",
+      tags: ["Agentic AI", "FastAPI", "Cybersécurité" , "APIs" , "Automation" , "IA" , "Web Scraping"],
+      image: dedefiaImg,
+      imageFit: 'contain',
+      github: "https://github.com/TresorAlad/DeDeFIA",
+      live: "#"
+    },
+    {
+      id: 3,
       title: "ChainCacao",
-      desc: "Plateforme de traçabilité du cacao de la ferme jusqu'à l'exportation, de façon infalsifiable. Paiement automatique de l'agriculteur dès réception du produit.",
+      desc: "Solution de traçabilité de la chaîne de production du cacao, avec structuration et gestion des données des différents acteurs et étapes. Backend conçu pour la transparence, la traçabilité et la gestion des données.",
       tags: ["AWS EC2" , "Next.js" , "Go", "Web3", "Hyperledger Fabric"],
       image: chainCacaoImg,
       github: "https://github.com/TresorAlad",
       live: "https://cacaombh.vercel.app/"
     },
     {
-      id: 3,
+      id: 4,
       title: "EventHub",
       desc: "Application mobile de gestion des événements tech au Togo. Découvrez, suivez et participez aux événements de la communauté tech locale. Bientôt disponible sur le Play Store.",
       tags: ["PostgreSQL", "React Native", "Expo", "Node.js"],
@@ -43,8 +54,8 @@ const Portfolio = () => {
       live: "#"
     },
     {
-      id: 4,
-      title: "Pitch AI V2",
+      id: 5,
+      title: "Pitch AI",
       desc: "Décrivez votre idée en 2 minutes et recevez un pitch structuré en 6 sections + un score de viabilité, généré par IA et ML. Gratuit, sans compte.",
       tags: ["IA", "ML", "Python", "NLP"],
       image: pitchAiImg,
@@ -52,7 +63,7 @@ const Portfolio = () => {
       live: "https://pitch-ia.vercel.app"
     },
     {
-      id: 5,
+      id: 6,
       title: "Météo Temps Réel",
       desc: "Application de visualisation des données météorologiques mondiales en temps réel via API REST.",
       tags: ["Golang", "JavaScript", "API REST"],
@@ -61,7 +72,7 @@ const Portfolio = () => {
       live: "https://meteodev.onrender.com/"
     },
     {
-      id: 6,
+      id: 7,
       title: "Gestion de Salles Univ.",
       desc: "Application Desktop de réservation et d'administration des salles universitaires avec gestion des conflits de planning.",
       tags: ["Java", "JavaFX", "Maven", "SQLite"],
@@ -70,7 +81,7 @@ const Portfolio = () => {
       live: "#"
     },
     {
-      id: 7,
+      id: 8,
       title: "Gestion Vidéo Club",
       desc: "Solution Desktop pour la gestion des locations, des stocks et des membres d'un Vidéo Club avec base de données embarquée.",
       tags: ["Java", "JavaFX", "SQLite"],
@@ -79,7 +90,7 @@ const Portfolio = () => {
       live: "#"
     },
     {
-      id: 8,
+      id: 9,
       title: "Gestion Aéroport & Vols",
       desc: "Modélisation complète d'un système de gestion aéroportuaire : MCD, MLD, MPD et diagramme de classes UML.",
       tags: ["UML", "Modelio", "SQL", "MCD/MLD"],
@@ -111,7 +122,7 @@ const Portfolio = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          Projets combinant IA, analyse de données, développement backend et modélisation de bases de données.
+          Projets d'IA, de data engineering, d'automatisation et de cybersécurité, de l'idée jusqu'au produit.
         </motion.p>
 
         <div className="portfolio-grid" style={gridStyle}>
@@ -128,8 +139,13 @@ const Portfolio = () => {
                 transition={{ duration: 0.5 }}
                 whileHover={{ y: -10 }}
               >
-                <div style={imgWrapperStyle}>
-                  <img src={proj.image} alt={proj.title} style={imgStyle} loading="lazy" />
+                <div style={proj.imageFit === 'contain' ? imgContainWrapperStyle : imgWrapperStyle}>
+                  <img
+                    src={proj.image}
+                    alt={proj.title}
+                    style={proj.imageFit === 'contain' ? imgContainStyle : imgStyle}
+                    loading="lazy"
+                  />
                 </div>
                 <div style={cardContentStyle}>
                   <h4 style={cardTitleStyle}>{proj.title}</h4>
@@ -200,10 +216,25 @@ const imgWrapperStyle = {
   overflow: 'hidden',
 };
 
+const imgContainWrapperStyle = {
+  ...imgWrapperStyle,
+  backgroundColor: '#000',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '24px',
+};
+
 const imgStyle = {
   width: '100%',
   height: '100%',
   objectFit: 'cover',
+};
+
+const imgContainStyle = {
+  width: '100%',
+  height: '100%',
+  objectFit: 'contain',
 };
 
 const cardContentStyle = {
