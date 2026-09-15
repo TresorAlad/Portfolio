@@ -1,0 +1,187 @@
+{
+    "personal_info": {
+        "name": "Trésor ALADE",
+        "role": "Développeur Backend (2 ans d'exp) & DBA Junior",
+        "email": "bernardalade92@gmail.com",
+        "location": "Togo",
+        "availability": "Disponible pour de nouvelles opportunités",
+        "stats": {
+            "years_experience": "2+",
+            "satisfied_clients": "3+",
+            "delivered_projects": "5"
+        },
+        "bio": "Développeur Backend avec 2 ans d'expérience, spécialisé dans la création de solutions robustes et évolutives. Je suis également Administrateur de Bases de Données (DBA) Junior, passionné par l'optimisation et la gestion des données."
+    },
+    "skills": {
+        "database": [
+            "Oracle",
+            "SQL Server",
+            "PostgreSQL",
+            "SQL",
+            "Azure SQL",
+            "MySQL",
+            "SQLite",
+            "MongoDB"
+        ],
+        "modelisation": [
+            "UML",
+            "MCD",
+            "MLD",
+            "Normalisation"
+        ],
+        "outils": [
+            "Docker",
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Modelio",
+            "Maven",
+            "Postman"
+        ],
+        "programmation": [
+            "Golang",
+            "Java",
+            "JavaScript",
+            "TypeScript"
+        ],
+        "dba": [
+            "Sauvegarde/Restauration",
+            "Optimisation SQL",
+            "Administration Oracle",
+            "Administration SQL Server"
+        ],
+        "web": [
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "Supabase",
+            "JavaFX"
+        ],
+        "ia_tools": [
+            "Prompt Engineering",
+            "Gemini API",
+            "Cursor",
+            "Claude AI",
+            "V0",
+            "Bolt"
+        ]
+    },
+    "projects": [
+        {
+            "name": "Gestion Aéroport & Vols",
+            "description": "Modélisation complète d'un système de gestion aéroportuaire avec diagramme de classes UML. Conception des entités (Aéroport, Vol, Vol Réel, Calendrier, Siège, Passager, Fidélité) avec leurs attributs, relations et cardinalités. Projet réalisé en respectant les principes MCD/MLD et la normalisation.",
+            "technologies": [
+                "UML",
+                "MCD",
+                "MLD",
+                "Modelio"
+            ],
+            "category": "dba"
+        },
+        {
+            "name": "Pitch AI",
+            "description": "Pitch AI est une plateforme qui analyse vos projet et vous donne les problèmes, solutions, Business Model, Canal de diffusion",
+            "technologies": [
+                "Golang",
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "category": "web"
+        },
+        {
+            "name": "Meteo",
+            "description": "Meteo est une application qui permet de visualiser les données météorologiques en temps réel.",
+            "technologies": [
+                "Golang",
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "category": "web"
+        },
+        {
+            "name": "Gestion Video Club (Desktop App)",
+            "description": "Application de gestion de location de cassettes vidéo avec interface JavaFX et base de données SQLite. Gestion des membres, stocks et retours.",
+            "technologies": [
+                "Java",
+                "JavaFX",
+                "SQLite",
+                "Maven"
+            ],
+            "category": "web"
+        },
+        {
+            "name": "Gestion de Salle Universitaire (Desktop App)",
+            "description": "Gestion de salle Universitaire est une application Desktop qui permet de gérer les salles universitaires et les réservations.",
+            "technologies": [
+                "Java",
+                "JavaFX",
+                "SQLite",
+                "Maven"
+            ],
+            "category": "web"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Développeur Backend & Administrateur de Bases de Données (DBA) Junior",
+            "company": "Indépendant / Projets Professionnels",
+            "duration": "2024 - Présent (2 ans)",
+            "description": "2 ans d'expérience en développement Backend, spécialisé dans l'architecture système et l'optimisation logicielle. Compétences en administration de bases de données (Oracle, PostgreSQL, SQL Server) en tant que profil Junior."
+        }
+    ],
+    "education": [
+        {
+            "degree": "Diplôme en Informatique Avancée",
+            "institution": "École Supérieure d'Informatique",
+            "year": "2023"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Voyage dans le monde des BDD",
+            "issuer": "Udemy",
+            "year": "2026"
+        },
+        {
+            "name": "Uml modelisation",
+            "issuer": "Linkedin Learning",
+            "year": "2026"
+        },
+        {
+            "name": "Oracle Administration",
+            "issuer": "Linkedin Learning",
+            "year": "2026"
+        },
+        {
+            "name": "Modelisation des Base de données",
+            "issuer": "Linkedin Learning",
+            "year": "2026"
+        },
+        {
+            "name": "Prompt Engineering",
+            "issuer": "Sololearn",
+            "year": "2026"
+        },
+        {
+            "name": "MLH Hackaton 2026",
+            "issuer": "MLH",
+            "year": "2025"
+        },
+        {
+            "name": "Vibe Coding",
+            "issuer": "Sololearn",
+            "year": "2026"
+        },
+        {
+            "name": "Essentiel Golang",
+            "issuer": "Linkedin Learning",
+            "year": "2025"
+        }
+    ],
+    "languages": [
+        "Français (Natif)",
+        "Anglais (A2)"
+    ]
+}
