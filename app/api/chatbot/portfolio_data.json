@@ -1,7 +1,7 @@
 {
     "personal_info": {
         "name": "Trésor ALADE",
-        "role": "Développeur Backend (2 ans d'exp) & DBA Junior",
+        "role": "AI & Data Engineer",
         "email": "bernardalade92@gmail.com",
         "location": "Togo",
         "availability": "Disponible pour de nouvelles opportunités",
@@ -10,7 +10,7 @@
             "satisfied_clients": "3+",
             "delivered_projects": "5"
         },
-        "bio": "Développeur Backend avec 2 ans d'expérience, spécialisé dans la création de solutions robustes et évolutives. Je suis également Administrateur de Bases de Données (DBA) Junior, passionné par l'optimisation et la gestion des données."
+        "bio": "AI & Data Engineer spécialisé dans l'intelligence artificielle, l'ingénierie des données et l'automatisation. Je conçois des solutions robustes, des pipelines de données et des intégrations IA orientées produit."
     },
     "skills": {
         "database": [
@@ -125,10 +125,10 @@
     ],
     "experience": [
         {
-            "role": "Développeur Backend & Administrateur de Bases de Données (DBA) Junior",
-            "company": "Indépendant / Projets Professionnels",
-            "duration": "2024 - Présent (2 ans)",
-            "description": "2 ans d'expérience en développement Backend, spécialisé dans l'architecture système et l'optimisation logicielle. Compétences en administration de bases de données (Oracle, PostgreSQL, SQL Server) en tant que profil Junior."
+            "role": "AI & Data Engineer",
+            "company": "Indépendant / Projets professionnels",
+            "duration": "2024 - Présent",
+            "description": "Conception et déploiement de solutions IA, pipelines de données et applications backend. Expertise en bases de données (Oracle, PostgreSQL, SQL Server), automatisation et intégration de modèles GenAI."
         }
     ],
     "education": [
