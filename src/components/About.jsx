@@ -13,7 +13,7 @@ const About = () => {
         <h2 className="section-title">À propos de moi</h2>
         <div className="about-content" style={aboutContentStyle}>
           <p style={paragraphStyle}>
-            Étudiant en Licence 3 Intelligence Artificielle et Big Data à l'ESGIS Togo,
+            Étudiant en Licence 2 Intelligence Artificielle et Big Data à l'ESGIS Togo,
             je me forme aux métiers d'AI Engineer et de Data Engineer. Je développe
             des solutions d'intelligence artificielle, de data et d'automatisation
             au service de besoins concrets.

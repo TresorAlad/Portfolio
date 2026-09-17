@@ -1,6 +1,6 @@
 # Trésor ALADE | Portfolio
 
-Portfolio personnel de **Trésor ALADE**, Junior AI & Data Engineer, étudiant en Licence 3 Intelligence Artificielle et Big Data à l'ESGIS Togo.
+Portfolio personnel de **Trésor ALADE**, Junior AI & Data Engineer, étudiant en Licence 2 Intelligence Artificielle et Big Data à l'ESGIS Togo.
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite)
